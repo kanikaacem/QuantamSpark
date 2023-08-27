@@ -1,0 +1,28 @@
+.getintouch-button{
+    background: transparent !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 0px !important;
+    padding: 10px 20px !important;
+    margin-top:100px;
+    font-weight: 500 !important;
+}
+.getintouch-button:hover{
+    border: 2px solid #05bc58 !important;
+    background-color: #05bc58 !important;
+}
+.home-shadow-div{
+    box-shadow: 0px 25px 100px 0px rgba(1, 1, 64, 0.1);
+    padding: 52px 40px;
+    border-radius: 16px
+}
+
+.our-services::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 5px;
+    background: linear-gradient(to left, #fff, #ff7900);
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
