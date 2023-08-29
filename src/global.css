@@ -1,22 +1,38 @@
-.getintouch-button{
+.background-div {
+    background-color: #fbfbfd;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    flex-grow: unset !important;
+    justify-content: flex-end;
+}
+
+.getintouch-button {
     background: transparent !important;
     border: 2px solid #ffffff !important;
     border-radius: 0px !important;
     padding: 10px 20px !important;
-    margin-top:100px;
+    margin-top: 100px;
     font-weight: 500 !important;
 }
-.getintouch-button:hover{
+
+.getintouch-button:hover {
     border: 2px solid #05bc58 !important;
     background-color: #05bc58 !important;
 }
-.home-shadow-div{
+
+.home-shadow-div {
     box-shadow: 0px 25px 100px 0px rgba(1, 1, 64, 0.1);
     padding: 52px 40px;
     border-radius: 16px
 }
 
-.our-services::after {
+.our-process::after,
+.our-services::after,
+.our-guides::after,
+.our-testimonials::after {
     content: "";
     display: block;
     width: 200px;
@@ -25,4 +41,78 @@
     border-radius: 10px;
     margin-top: 15px;
     margin-bottom: 20px;
-  }
+}
+
+.button-type3 {
+    border: 2px solid #ff7900 !important;
+    width: fit-content !important;
+    padding: 15px !important;
+    text-decoration: none;
+    color: #ff7900 !important;
+    font-weight: 600 !important;
+    background-color: #ffffff !important;
+}
+
+
+.button-type3:hover {
+    border: 2px solid #05bc58 !important;
+    background-color: #05bc58 !important;
+    color: #ffffff !important;
+    font-size: 18px;
+}
+
+.custom-link {
+    text-decoration: none;
+    color: black;
+}
+
+.shadow-box {
+    box-shadow: 1px 5px 12px 6px rgba(237, 231, 231, 0.75);
+    -webkit-box-shadow: 1px 5px 12px 6px rgba(237, 231, 231, 0.75);
+    -moz-box-shadow: 1px 5px 12px 6px rgba(237, 231, 231, 0.75);
+    background: #ffffff;
+}
+
+.website-button2 {
+    background-color: #05bc58 !important;
+    color: #ffffff !important;
+    padding: 15px 50px !important;
+    font-size: 18px !important;
+    border: none !important;
+    border-radius: 0px !important;
+}
+
+.our-process-item {
+    min-height: 403px;
+    padding: 30px;
+    width: 300px;
+    cursor: pointer;
+}
+
+.our-process-item:hover {
+    background-color: #ff7900;
+    color: #ffffff;
+}
+
+.our-guide-item {
+    min-height: 400;
+    width: 400px;
+}
+
+.testimonial-item {
+    max-width: 600px;
+    border: 2px solid #ff7900;
+    padding: 20px;
+    border-radius: 11px;
+    min-height: 300px;
+}
+
+
+
+@media (max-width: 767px) {
+    .col-md-6.d-flex.flex-column.gap-3 {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+        /* Remove right padding on smaller screens */
+    }
+}
