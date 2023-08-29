@@ -1,6 +1,7 @@
 import { Container, Carousel, Button } from 'react-bootstrap';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import ContactusSection from '../components/ContactusSection';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -115,7 +116,7 @@ const Home = () => {
             </Container>
             {/* Third Section */}
             <Container className='mt-3 mb-3 d-flex flex-column align-items-center justify-content-center gap-3'>
-                <h1 className='our-services'>Our Services</h1>
+                <h1 className='our-services dashed-title'>Our Services</h1>
                 <div className="home-shadow-div"
                     style={{
                         backgroundImage: 'url("https://quantum4u.in/img/bg_services.png")',
@@ -168,25 +169,12 @@ const Home = () => {
                 </div>
             </Container>
 
-            {/* Subscription Section */}
-            <Container style={{
-                padding: "100px 0px",
-                backgroundImage: `url('https://quantum4u.in/img/call_us_bg.png')`,
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center center",
-                width: "100%",
-                textAlign: "center",
-            }}>
-                <h1 style={{ color: "#ffffff" }}>Need an App or Website?</h1>
-                <h5 className='mt-3' style={{ color: "#ffffff" }}>Let's talk about it over a cup of coffee.</h5>
-                <Button className='mt-3 website-button2'>Contact us</Button>
-            </Container>
+            <ContactusSection />
 
             {/* Our Process */}
             <div className="background-div">
                 <Container className='mt-3 mb-3 d-flex flex-column align-items-center justify-content-center gap-3'>
-                    <h1 className='our-process'>Our Process</h1>
+                    <h1 className='our-process dashed-title'>Our Process</h1>
                     <p>Build your powerful app or website
                         in 4 Easy Steps</p>
                     <div className='d-flex align-items-center justify-content-center flex-wrap w-100 gap-2'>
@@ -202,7 +190,7 @@ const Home = () => {
 
             {/* Our Guides */}
             <Container className='mt-5 mb-5 d-flex flex-column align-items-center justify-content-center gap-3'>
-                <h1 className='our-guides'>Guides</h1>
+                <h1 className='our-guides dashed-title'>Guides</h1>
                 <div className='d-flex align-items-center justify-content-center flex-wrap w-100 gap-2'>
                     <OurGuideItem />
                     <OurGuideItem />
@@ -215,7 +203,7 @@ const Home = () => {
             {/* Our Testiomonial */}
             <div className="background-div">
                 <Container className='mt-3 mb-3 d-flex flex-column align-items-center justify-content-center gap-3'>
-                    <h1 className='our-testimonials'>Testimonials</h1>
+                    <h1 className='our-testimonials dashed-title'>Testimonials</h1>
                     <p>We feel immense pride in calling ourselves industry experts
                         with our apps having been downloaded 60+ million times globally.
                         Here are some reviews left by our happy users.</p>
