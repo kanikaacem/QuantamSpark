@@ -2,25 +2,11 @@ import { Container, Carousel, Button } from 'react-bootstrap';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ContactusSection from '../components/ContactusSection';
+import WebsiteItemI from '../components/websiteItemI';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-    const OurProcessItem = () => {
-        return (
-            <div className='our-process-item shadow-box'>
-                <div
-                    style={{ width: "80px", height: "80px" }}>
-                    <img src="https://quantum4u.in/img/acr.png" alt="Logo" width="100%" height="100%" />
-                </div>
-                <h5 className='mt-2'>Planning & Estimation</h5>
-                <p>Our team of experts will talk to you
-                    about your needs & expectations, after
-                    which they will create a detailed framework
-                    for your project.
-                </p>
-            </div>
-        )
-    }
+
     const OurGuideItem = () => {
         return (
             <div className='our-guide-item shadow-box'>
@@ -92,7 +78,7 @@ const Home = () => {
                 </div>
             </Container>
             {/* Second Section */}
-            <Container className='p-0 mt-3 mb-3 d-flex flex-column align-items-center justify-content-center gap-3'
+            <Container className='p-0 website-sections d-flex flex-column align-items-center justify-content-center gap-3'
                 style={{
                     backgroundImage: `url('https://quantum4u.in/img/hosting/map.png')`,
                     backgroundSize: "cover",
@@ -102,11 +88,11 @@ const Home = () => {
                 }}>
                 <div className="d-flex flex-column align-items-center justify-content-center gap-3">
                     <h2 className='fw-bold'>60 Million+</h2>
-                    <h1>Users WorldWide</h1>
+                    {/* <h1>Users WorldWide</h1> */}
                     <img src="https://quantum4u.in/img/rating_star.png" height="20px" width="100px" alt="Star Image" />
                     <p className='fw-bold'>(1 Million Ratings)</p>
                 </div>
-                <div className="d-flex gap-4 flex-wrap">
+                <div className="d-flex justify-content-center gap-4 flex-wrap">
                     <Link to=""><img src="https://quantum4u.in/img/acr.png" width="50px" height="50px" alt="LinkName"></img></Link>
                     <Link to=""><img src="https://quantum4u.in/img/acr.png" width="50px" height="50px" alt="LinkName"></img></Link>
                     <Link to=""><img src="https://quantum4u.in/img/acr.png" width="50px" height="50px" alt="LinkName"></img></Link>
@@ -115,7 +101,7 @@ const Home = () => {
                 </div>
             </Container>
             {/* Third Section */}
-            <Container className='mt-3 mb-3 d-flex flex-column align-items-center justify-content-center gap-3'>
+            <Container className='website-sections d-flex flex-column align-items-center justify-content-center gap-3'>
                 <h1 className='our-services dashed-title'>Our Services</h1>
                 <div className="home-shadow-div"
                     style={{
@@ -138,12 +124,12 @@ const Home = () => {
                 </div>
             </Container>
             {/* Fourth Section */}
-            <Container style={{ padding: "150px 20px" }}>
+            <Container className='website-sections'>
                 <div className='row d-flex justify-content-between align-items-center'>
-                    <div className='col-md-6 col-12 d-flex flex-column gap-3 ' style={{ paddingRight: "300px" }}>
-                        <h1 className='fw-bold' >Mobile App/Web development</h1>
-                        <p>We build innovative native apps for Android & iOS that will
-                            give your business the reach & recognition it deserves.</p>
+                    <div className='col-md-6 col-12 d-flex flex-column gap-3 ' >
+                        <h1 className='fw-bold' >Mobile App/Web <br /> development</h1>
+                        <p>We build innovative native apps for Android & iOS<br /> that will
+                            give your business the reach & recognition it<br /> deserves.</p>
                         <h5 className='fw-bold'>Android App Development</h5>
                         <h5 className='fw-bold'>iPhone App Development</h5>
                         <h5 className='fw-bold'>Web Development</h5>
@@ -157,13 +143,12 @@ const Home = () => {
                     <div className='col-md-6 col-12 p-0'>
                         <img width="100%" src="https://quantum4u.in/img/ser_one.png" alt="ser_one" />
                     </div>
-                    <div className='col-md-6 col-12 d-flex flex-column gap-3' style={{ paddingLeft: "300px" }}>
-                        <h1 className='fw-bold' >UI Design & Website Development</h1>
-                        <p>We offer industry-leading website & UI development solutions so
+                    <div className='col-md-6 col-12 d-flex flex-column gap-3' >
+                        <h1 className='fw-bold' >UI Design & Website <br /> Development</h1>
+                        <p>We offer industry-leading website & UI development <br /> solutions so
                             that you can have a strong presence online.</p>
                         <Link to="" className="custom-link"><h5 className='fw-bold'>Website & App UI Design </h5></Link>
                         <Link to="" className='custom-link'><h5 className='fw-bold'>Web Development</h5></Link>
-
                     </div>
 
                 </div>
@@ -173,23 +158,20 @@ const Home = () => {
 
             {/* Our Process */}
             <div className="background-div">
-                <Container className='mt-3 mb-3 d-flex flex-column align-items-center justify-content-center gap-3'>
+                <Container className='d-flex flex-column align-items-center justify-content-center gap-3'>
                     <h1 className='our-process dashed-title'>Our Process</h1>
                     <p>Build your powerful app or website
                         in 4 Easy Steps</p>
-                    <div className='d-flex align-items-center justify-content-center flex-wrap w-100 gap-2'>
-                        <OurProcessItem />
-                        <OurProcessItem />
-                        <OurProcessItem />
-                        <OurProcessItem />
-
-
+                    <div className='d-flex align-items-center justify-content-center flex-wrap w-100 gap-4'>
+                        {([1, 2, 3, 4]).map((item) => {
+                            return (<WebsiteItemI key={item} />)
+                        })}
                     </div>
                 </Container>
             </div>
 
             {/* Our Guides */}
-            <Container className='mt-5 mb-5 d-flex flex-column align-items-center justify-content-center gap-3'>
+            <Container className='website-sections d-flex flex-column align-items-center justify-content-center gap-3'>
                 <h1 className='our-guides dashed-title'>Guides</h1>
                 <div className='d-flex align-items-center justify-content-center flex-wrap w-100 gap-2'>
                     <OurGuideItem />
@@ -201,8 +183,8 @@ const Home = () => {
             </Container>
 
             {/* Our Testiomonial */}
-            <div className="background-div">
-                <Container className='mt-3 mb-3 d-flex flex-column align-items-center justify-content-center gap-3'>
+            <Container className="background-div">
+                <Container className='website-sections d-flex flex-column align-items-center justify-content-center gap-3'>
                     <h1 className='our-testimonials dashed-title'>Testimonials</h1>
                     <p>We feel immense pride in calling ourselves industry experts
                         with our apps having been downloaded 60+ million times globally.
@@ -247,7 +229,7 @@ const Home = () => {
                     </div>
 
                 </Container>
-            </div>
+            </Container>
 
             <Footer />
         </section >
