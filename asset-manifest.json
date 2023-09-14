@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/QuantamSpark/static/css/main.166a240c.css",
+    "main.js": "/QuantamSpark/static/js/main.e0443b3f.js",
+    "static/js/787.3e3266ea.chunk.js": "/QuantamSpark/static/js/787.3e3266ea.chunk.js",
+    "index.html": "/QuantamSpark/index.html",
+    "main.166a240c.css.map": "/QuantamSpark/static/css/main.166a240c.css.map",
+    "main.e0443b3f.js.map": "/QuantamSpark/static/js/main.e0443b3f.js.map",
+    "787.3e3266ea.chunk.js.map": "/QuantamSpark/static/js/787.3e3266ea.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.166a240c.css",
+    "static/js/main.e0443b3f.js"
+  ]
+}
