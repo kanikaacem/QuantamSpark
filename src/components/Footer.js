@@ -1,13 +1,16 @@
 import { Container, Button } from "react-bootstrap"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Footer = () => {
+    const navigate = useNavigate();
     return (
         <section className="footer pt-5" style={{ background: "#242424", color: "#ffffff" }}>
             <Container className="row d-flex gap-4 justify-content-between pt-3 pb-3" style={{ margin: "0 auto" }}>
                 <div className="col-md-2 col-12">
-                    <img src="https://quantum4u.in/img/logo.png" width="130px" height="50px" alt="ImgLogo" />
+                    <a href="/" >
+                        <img src="https://quantum4u.in/img/logo.png" width="130px" height="50px" alt="companyLogo" />
+                    </a>
                     <h6 className="mt-3" style={{ fontWeight: "100" }}>Need an App or a Website?</h6>
-                    <Button className='mt-3 website-button2 w-100'>Contact us</Button>
+                    <Button className='mt-3 website-button2 w-100' onClick={() => navigate('/contact-us')}>Contact us</Button>
                 </div>
                 <div className="col-md-2 col-12 d-flex flex-column gap-2">
                     <h4>About Us</h4>

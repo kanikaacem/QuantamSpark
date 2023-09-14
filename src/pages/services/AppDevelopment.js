@@ -21,7 +21,7 @@ const AppDevelopment = () => {
             <div className='row d-flex align-items-center justify-content-center flex-wrap w-100 gap-4'>
                 {([1, 2]).map((item) => {
                     return (<div className="shadow-box p-5 col-md-5 col-12" key={item} >
-                        <img src="" />
+                        {/* <img src="" /> */}
                         <h4 className="fw-bold">Android App Developement</h4>
                         <p className="my-5">We have developed many smart utility
                             apps for Android that have touched the
@@ -52,7 +52,7 @@ const AppDevelopment = () => {
                     return (<div key={item} className="shadow-box industry-specific-item p-3 d-flex flex-column align-items-center">
                         <div
                             className="d-flex align-items-center justify-content-center" style={{ width: "80px", height: "80px", background: "pink", borderRadius: "50%" }}>
-                            <img src="https://quantum4u.in/img/heart.png" width="50px" height="50px" />
+                            <img src="https://quantum4u.in/img/heart.png" width="50px" height="50px" alt="Blogging" />
                         </div>
                         <h6 className="mt-3"> New Blogging</h6>
                     </div>)
@@ -61,7 +61,9 @@ const AppDevelopment = () => {
 
         </Container>
 
-        <ContactusSection />
+        <div className="mb-2">
+            <ContactusSection />
+        </div>
 
         <Footer />
     </section >

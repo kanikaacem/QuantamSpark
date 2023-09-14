@@ -89,7 +89,7 @@ const Home = () => {
                 <div className="d-flex flex-column align-items-center justify-content-center gap-3">
                     <h2 className='fw-bold'>60 Million+</h2>
                     {/* <h1>Users WorldWide</h1> */}
-                    <img src="https://quantum4u.in/img/rating_star.png" height="20px" width="100px" alt="Star Image" />
+                    <img src="https://quantum4u.in/img/rating_star.png" height="20px" width="100px" alt="Star" />
                     <p className='fw-bold'>(1 Million Ratings)</p>
                 </div>
                 <div className="d-flex justify-content-center gap-4 flex-wrap">
@@ -124,8 +124,8 @@ const Home = () => {
                 </div>
             </Container>
             {/* Fourth Section */}
-            <Container className='website-sections'>
-                <div className='row d-flex justify-content-between align-items-center'>
+            <Container className='website-sections p-3'>
+                <div className='row d-flex justify-content-between align-items-center p-2 '>
                     <div className='col-md-6 col-12 d-flex flex-column gap-3 ' >
                         <h1 className='fw-bold' >Mobile App/Web <br /> development</h1>
                         <p>We build innovative native apps for Android & iOS<br /> that will
@@ -133,22 +133,24 @@ const Home = () => {
                         <h5 className='fw-bold'>Android App Development</h5>
                         <h5 className='fw-bold'>iPhone App Development</h5>
                         <h5 className='fw-bold'>Web Development</h5>
-                        <Link to="" className='learn_more-btn button-type3'> Learn More </Link>
+                        <Link to="" className='learn_more-btn button-type3 mb-3'> Learn More </Link>
                     </div>
                     <div className='col-md-6 col-12 p-0'>
                         <img width="100%" src="https://quantum4u.in/img/ser_one.png" alt="ser_one" />
                     </div>
                 </div>
-                <div className='row d-flex justify-content-between align-items-center' style={{ marginTop: "100px" }}>
+                <div className='row d-flex justify-content-between align-items-center p-2 gap-2' style={{ marginTop: "80px" }}>
                     <div className='col-md-6 col-12 p-0'>
                         <img width="100%" src="https://quantum4u.in/img/ser_one.png" alt="ser_one" />
                     </div>
-                    <div className='col-md-6 col-12 d-flex flex-column gap-3' >
-                        <h1 className='fw-bold' >UI Design & Website <br /> Development</h1>
-                        <p>We offer industry-leading website & UI development <br /> solutions so
-                            that you can have a strong presence online.</p>
-                        <Link to="" className="custom-link"><h5 className='fw-bold'>Website & App UI Design </h5></Link>
-                        <Link to="" className='custom-link'><h5 className='fw-bold'>Web Development</h5></Link>
+                    <div className='col-md-6 col-12 d-flex flex-column gap-3' style={{ width: 'fit-content' }}>
+                        <div style={{ width: 'fit-content' }}>
+                            <h1 className='fw-bold' >UI Design & Website <br /> Development</h1>
+                            <p>We offer industry-leading website & UI development <br /> solutions so
+                                that you can have a strong presence online.</p>
+                            <Link to="" className="custom-link"><h5 className='fw-bold'>Website & App UI Design </h5></Link>
+                            <Link to="" className='custom-link'><h5 className='fw-bold'>Web Development</h5></Link>
+                        </div>
                     </div>
 
                 </div>
@@ -174,16 +176,16 @@ const Home = () => {
             <Container className='website-sections d-flex flex-column align-items-center justify-content-center gap-3'>
                 <h1 className='our-guides dashed-title'>Guides</h1>
                 <div className='d-flex align-items-center justify-content-center flex-wrap w-100 gap-2'>
-                    <OurGuideItem />
-                    <OurGuideItem />
-                    <OurGuideItem />
+                    {[1, 2, 3].map((item) => {
+                        return <OurGuideItem key={item} />
 
+                    })}
                 </div>
                 <Button className='mt-5 read-more-btn button-type3'>Read More</Button>
             </Container>
 
             {/* Our Testiomonial */}
-            <Container className="background-div">
+            <Container fluid className="background-div">
                 <Container className='website-sections d-flex flex-column align-items-center justify-content-center gap-3'>
                     <h1 className='our-testimonials dashed-title'>Testimonials</h1>
                     <p>We feel immense pride in calling ourselves industry experts
@@ -230,6 +232,15 @@ const Home = () => {
 
                 </Container>
             </Container>
+
+            {/* <Container className='d-flex align-items-center' fluid style={{ height: "600px" }}>
+                <Container className='p-5' style={{ background: "#ECF8FF", borderRadius: "11px" }}>
+                    <p>Lorem ipsum is placeholder text commonly used in the <br></br> graphic,
+                        print, and publishing industries for previewing <br></br>layouts and visual mockups.
+                    </p>
+                    <h5>Download the Handover Mobile App For Free</h5>
+                </Container>
+            </Container> */}
 
             <Footer />
         </section >
